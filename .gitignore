@@ -1,0 +1,10 @@
+target
+.env
+__pycache__
+*.so
+dist
+ghidra*
+*.npy
+.ipynb_checkpoints
+examples/*.ipynb
+examples/*.csv
