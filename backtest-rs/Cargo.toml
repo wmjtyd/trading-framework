@@ -1,0 +1,45 @@
+[package]
+name = "barter"
+version = "0.7.2"
+authors = ["oss.jtyd <oss.jtyd@yandex.ru"]
+edition = "2021"
+license = "MIT"
+documentation = "https://docs.rs/barter/"
+repository = "https://github.com/oss-jtyd/trading-framework/backtest-rs"
+readme = "README.md"
+description = "Framework for building event-driven live-trading & backtesting engines"
+keywords = ["trading", "backtesting", "crypto", "stocks", "investment"]
+categories = ["accessibility", "simulation"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Barter Ecosystem
+barter-data = "0.3.2"
+
+# Logging
+tracing = "0.1.29"
+
+# Async
+tokio = { version = "1.14.0", features = ["sync"] }
+tokio-stream = { version = "0.1.7", features = ["sync"] }
+futures = "0.3.19"
+
+# Error
+thiserror = "1.0.30"
+
+# SerDe
+serde = { version = "1.0.130", features = ["derive"] }
+serde_json = "1.0.68"
+
+# Persistence
+redis = "0.20.0"
+
+# Strategy
+ta = "0.4.0"
+
+# Misc
+uuid = {version = "0.8", features = ["v4", "serde"]}
+chrono = {version = "0.4.19", features = ["serde"]}
+prettytable-rs = "0.8.0"
+parking_lot = "0.12.0"

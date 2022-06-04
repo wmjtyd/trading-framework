@@ -1,0 +1,38 @@
+[package]
+name = "barter-data"
+version = "0.4.4"
+authors = ["oss.jtyd <oss.jtyd@yandex.ru"]
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/oss-jtyd/trading-framework/data-rs"
+documentation = "https://docs.rs/barter-data/"
+readme = "README.md"
+description = "High performance & normalised WebSocket intergration for leading cryptocurrency exchanges - batteries included."
+keywords = ["trading", "backtesting", "crypto", "stocks", "investment"]
+categories = ["accessibility", "simulation"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Barter Ecosystem
+barter-integration = "0.2.2"
+
+# Logging
+tracing = "0.1.29"
+
+# Async
+tokio = { version = "1.17.0", features = ["sync", "macros", "rt-multi-thread"] }
+tokio-stream = { version = "0.1.7", features = ["sync"] }
+futures = "0.3.19"
+async-trait = "0.1.52"
+
+# SerDe
+serde = { version = "1.0.130", features = ["derive"] }
+serde_json = "1.0.68"
+
+# Strategy
+ta = "0.4.0"
+
+# Misc
+chrono = {version = "0.4.19", features = ["serde"]}
+thiserror = "1.0.31"
