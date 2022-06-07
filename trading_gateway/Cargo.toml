@@ -1,11 +1,7 @@
 [workspace]
-
-members = ["server"]
+default-members = ["shared"]
+members = ["server", "shared"]
 
 [patch.crates-io]
-chrono = {version = "0.4", git = "https://github.com/dovahcrow/chrono", features = ["rkyv"], branch = "rkyv"}
-ftx = {git = "https://github.com/fabianboesiger/ftx"}
-rust_decimal = {git = "https://github.com/dovahcrow/rust-decimal", features = ["rkyv"]}
-
-# [profile.release]
-# lto = true
+chrono = {git = "https://github.com/dovahcrow/chrono"}
+rust_decimal = {git = "https://github.com/dovahcrow/rust-decimal"}

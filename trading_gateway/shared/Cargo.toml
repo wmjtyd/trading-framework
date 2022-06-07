@@ -1,38 +1,24 @@
 [package]
 edition = "2018"
-name = "trading-gateway"
+name = "shared"
 version = "0.1.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-anyhow = "1"
-async-trait = "0.1"
 chrono = {version = "0.4", features = ["rkyv"]}
-closure = "0.3"
-crc32fast = "1"
-derive_builder = "0.11"
 derive_more = "0.99"
-env_logger = "0.9"
 fehler = "1"
 ftx = "0.5"
-futures = {version = "0.3", features = ["std"]}
-hyper = {version = "0.14", features = ["server"]}
-itertools = "0.10"
-log = "0.4"
-num-traits = "0.2"
 once_cell = "1"
-prettytable-rs = "0.8"
 prometheus = "0.13"
+rand = "0.8"
 regex = "1"
 rkyv = "0.7"
 rust_decimal = {git = "https://github.com/dovahcrow/rust-decimal", features = ["rkyv"]}
-rust_decimal_macros = "1"
 serde = {version = "1", features = ["derive"]}
 serde_json = "1"
-structopt = "0.3"
 thiserror = "1"
-tokio = {version = "1", features = ["macros", "rt", "rt-multi-thread", "signal", "time", "net"]}
-
-[lib]
-name = "trading_gateway"
+tokio = {version = "1", features = ["time"]}
+uuid = {version = "1", features = ["v4", "serde"]}
+zmq = "0.9"
